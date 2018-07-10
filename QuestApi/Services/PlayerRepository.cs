@@ -3,6 +3,10 @@ using QuestApi.Models;
 
 namespace QuestApi.Services
 {
+    /// <summary>
+    /// Different IPlayerRepository implementations
+    /// can be used in production code and unit test code.
+    /// </summary>
     public class PlayerRepository : IPlayerRepository
     {
         private readonly PlayerContext _context;

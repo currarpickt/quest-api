@@ -5,8 +5,6 @@ using Microsoft.Extensions.Options;
 using QuestApi.Interfaces;
 using QuestApi.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace QuestApi.Controllers
 {
     [Route("api/progress")]
@@ -38,11 +36,12 @@ namespace QuestApi.Controllers
 
                 var questMilestones = _configuration.Milestones.OrderBy(x => x.Index);
                 var milestonesCompleted = new List<MilestoneCompleted>();
-
+                
                 var lastMilestoneIndex = 0;
                 var totalQuestPoint = questPointEarned;
                 var percentCompleted = questPointEarned / totalPointNeeded * 100;
 
+                //Only take player data into account if player's current quest is active
                 if (player.QuestId == _configuration.Quest.Id)
                 {
                     totalQuestPoint = questPointEarned + player.QuestPoint;
