@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<!-- static HTML for Quest API Test Page -->
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest API Test Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Quest API Test Page</h1>
+    <div>
+      <label for="url">API Address:</label>
+      <input id="apiUrl" type="url" autocomplete="off" placeholder="API Address" value="http://localhost:5309" />
+    </div>
+    <!-- test the `/api/progress` endpoint -->
+    <h2>Test /api/progress</h2>
+    <div>
+      <label for="dataParam">Data Parameters:</label>
+      <br>
+      <textarea id="dataParam" autocomplete="off" cols="24" placeholder="Data Parameters" rows="5"></textarea>
+      <br>
+      <button id="postProgress" onclick="postProgress()">POST Progress</button>
+    </div>
+    <p>Response Status Code: <b id="progressStatus">-</b></p>
+    <textarea id="progressResponse" autocomplete="off" cols="80" disabled placeholder="POST Progress response content will be here" rows="10"></textarea>
+    <!-- test the `/api/state` endpoint -->
+    <h2>Test /api/state</h2>
+    <div>
+      <label for="playerId">Player ID:</label>
+      <input id="playerId" type="text" autocomplete="off" placeholder="Player ID" />
+      <button onclick="getState()">GET State</button>
+    </div>
+    <p>Response Status Code: <b id="stateStatus">-</b></p>
+    <textarea id="stateResponse" autocomplete="off" cols="80" disabled placeholder="GET State response content will be here" rows="4"></textarea>
+  </body>
+</html>

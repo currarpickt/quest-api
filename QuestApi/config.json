@@ -1,0 +1,31 @@
+﻿{
+  "RateFromBet": 0.3,
+  "LevelBonusRate": 0.7,
+  "Quest": {
+      "Id": "Q01",
+      "Title": "Dungeon",
+      "QuestPointNeeded": 31
+  },
+  "Milestones": [
+    {
+      "Index": 1,
+      "TotalQuestPoint": 2,
+      "ChipsAwarded": 10
+    },
+    {
+      "Index": 2,
+      "TotalQuestPoint": 5,
+      "ChipsAwarded": 12
+    },
+    {
+      "Index": 3,
+      "TotalQuestPoint": 9,
+      "ChipsAwarded": 17
+    },
+    {
+      "Index": 4,
+      "TotalQuestPoint": 15,
+      "ChipsAwarded": 23
+    }
+  ]
+}
